@@ -43,9 +43,11 @@ const Navbar = () => {
             )}
           </div>
         <div className="flex lg:mx-6 lg:ml-0 mt-[-10px]">
+          <Link to='/'>
           <h2 className="lg:text-3xl text-xl font-semibold text-bold">
             Manageme
           </h2>
+          </Link>
         </div>
         <div className="flex flex-row items-center ml-[380px]">
           <ul className="hidden lg:flex ml-90 gap-6">

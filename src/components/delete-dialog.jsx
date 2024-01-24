@@ -1,9 +1,19 @@
 import React from "react";
+import { supabase } from "../utils/SupabaseClient";
 
-export function DeleteDialog({ open, setOpen }) {
-  const handleDelete = () => {
-    // Perform delete operation here
-    setOpen(false);
+export function DeleteDialog({ open, setOpen,id }) {
+  const handleDelete = async() => {
+   
+      let { data, error } = await supabase
+         .from('todos')
+         .delete()
+         .match({ id: id });
+     
+      if (error) console.log('Error deleting todo: ', error);
+      else console.log('Deleted todo: ', data);
+      setOpen(false);
+      window.location.reload()
+      return data;
   };
 
   return (
