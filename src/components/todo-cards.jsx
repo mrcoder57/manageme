@@ -27,7 +27,7 @@ const TodoCard = ({ title, description, todo, dueDate, onDelete, onEdit,id }) =>
    }
    
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl w-96 m-5">
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl lg:w-96 m-5">
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           {/* <img
