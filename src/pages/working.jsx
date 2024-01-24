@@ -24,7 +24,7 @@ const Working = () => {
     getAllTodos().then(data => setTodos(data));
  }, []);
   return (
-    <div className=" grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3">
+    <div className=" grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
     {todos.map((card, index) => (
       <TodoCard
         key={index}
